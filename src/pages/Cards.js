@@ -37,7 +37,8 @@ export default function Cards({ userName }) {
 
   return (
     <>
-      <div>{userName}</div>
+    
+      <Div>{userName}</Div>
       <Table>
         {table.map((card, i) => (
           <Card>
@@ -48,8 +49,8 @@ export default function Cards({ userName }) {
           </Card>
         ))}
       </Table>
-
-      <button
+     <ButtonContainer>
+      <Button
         onClick={() => {
           setTable([...table, cards[qty]]);
           setQty(qty + 1);
@@ -57,30 +58,88 @@ export default function Cards({ userName }) {
         disabled={qty === 8}
       >
         Puxar carta
-      </button>
-      <button onClick={() => setTable([...table.sort(shuffle)])}>
+      </Button>
+      <Button onClick={() => setTable([...table.sort(shuffle)])}>
         Embaralhar carta{" "}
-      </button>
+      </Button>
+      </ButtonContainer>
+      
     </>
   );
 }
 
+
+
+
+const Div = styled.div`
+background: linear-gradient(to right, #14163c 0%, #03217b 79%);
+  text-transform: uppercase;
+  width: 100%;
+  height: 1.2rem;  
+  color: white;
+  margin-top: -9%;
+  
+`;
+
 const Image = styled.img`
   height: 200px;
   width: 140px;
+  justify-content: center;
 `;
 
 const Card = styled.div`
   height: 100px;
-  width: 500px;
+  width: 250px;
+  
 `;
 const Table = styled.div`
   display: flex;
   gap: 10px;
   justify-content: center;
-  height: 50vh;
+  height: 70vh;
   width: 100vw;
 `;
-const Point = styled.div``;
-const Description = styled.span``;
-const Name = styled.h1``;
+const Point = styled.div`
+color: #ffffff;
+
+`;
+
+
+const Description = styled.span`
+
+font-size: 12px;
+  display: flex;
+  text-align: center; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  text-transform: capitalize;
+  color: #ffffff;
+  `;
+  const Name = styled.h1`
+  color: #ffffff;
+  font-size: 17px;
+  height: 2rem;
+  `;
+
+const ButtonContainer = styled.div`
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+`;
+
+const Button = styled.button`
+  background: linear-gradient(to right, #14163c 0%, #03217b 79%);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  width: 20%;
+  height: 3rem;
+  border: none;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 0 15px;
+`;

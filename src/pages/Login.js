@@ -12,23 +12,23 @@ export default function Login({ userName, setUserName }) {
   
 
   return (
-    <MainContainer>
+    
        <MainContainer>
       <WelcomeText>Welcome</WelcomeText>
       <InputContainer>
-      <Input value={userName} onChange={(e) => setUserName(e.target.value)}></Input>
+      <Input placeholder={'Digite seu Nome'} value={userName} onChange={(e) => setUserName(e.target.value)}></Input>
       
       </InputContainer>
       <ButtonContainer>
-      <Button onClick={() => navigation("/cards")}> Jogar</Button>
+      <Button onClick={() => navigation("/cards")}> Play</Button>
       </ButtonContainer>
-      <div>OR LOGIN WITH</div>
+      <div>cards game</div>
       <HorizontalRule />
       
-      <div>Forgot Password ?</div>
+      <Text>instruction:<i>5 cards will be selected at the beginning of the game, you will have three options to remove cards and two selection buttons "detach cards" and "shuffle cards" the game will use an external api with twelve thousand cards.</i></Text>
     </MainContainer>     
       
-    </MainContainer>
+    
   );
 }
 
@@ -47,8 +47,7 @@ const MainContainer = styled.div`
   -webkit-backdrop-filter: blur(8.5px);
   border-radius: 10px;
   color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
+  text-transform: uppercase;  
   @media only screen and (max-width: 320px) {
     width: 80vw;
     height: 90vh;
@@ -153,6 +152,19 @@ const HorizontalRule = styled.hr`
   margin: 1.5rem 0 1rem 0;
   backdrop-filter: blur(25px);
 `;
+
+const Text = styled.text`
+  font-size: 12px;
+  display: flex;
+  text-align: center; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 30px;
+  text-transform: capitalize;
+  
+  
+  
+`
+
 
 
 
