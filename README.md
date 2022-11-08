@@ -1,3 +1,13 @@
+
+Serão selecionadas 5 cartas no início do jogo, você terá três opções para remover cartas e dois botões de seleção "desanexar cartas" e "embaralhar cartas" o jogo usará uma API externa com doze mil cartas
+
+![image](https://user-images.githubusercontent.com/64655153/200611917-f9bb880f-114e-410d-98c8-64db929763e0.png)
+
+![image](https://user-images.githubusercontent.com/64655153/200611642-5ff2f555-1dc5-495c-b25d-d39178813582.png)
+
+![image](https://user-images.githubusercontent.com/64655153/200612305-5500e720-45c3-4af9-8e9b-74f32a11d9a1.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
